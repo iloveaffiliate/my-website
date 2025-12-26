@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 :root {
     --primary: #6366f1;
     --primary-dark: #4f46e5;
@@ -277,6 +278,7 @@ nav {
 }
 
 .insights h2 {
+    font-size: 1.8rem;
     text-align: center;
     margin-bottom: 2rem;
 }
@@ -581,13 +583,14 @@ tr:not(:last-child) {
     background: var(--dark-card);
     padding: 1.5rem;
     margin-bottom: 1rem;
-    border-radius: 12px;
+    border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     cursor: pointer;
     transition: all 0.3s;
 }
 
 .faq-item:hover {
+    background: rgba(255, 255, 255, 0.08);
     border-color: var(--primary);
 }
 
@@ -601,6 +604,7 @@ tr:not(:last-child) {
 .faq-answer {
     margin-top: 1rem;
     color: var(--text-muted);
+    /* color:#a0a0a0; */
     display: block;
 }
 
@@ -608,11 +612,12 @@ tr:not(:last-child) {
     display: block;
 }
 
+
 /* Final CTA */
 .final-cta {
     max-width: 1000px;
     margin: 4rem auto 0;
-    padding: 3rem 2rem;
+    padding: 2rem 2rem;
     text-align: center;
     background: linear-gradient(
         180deg,
@@ -626,6 +631,11 @@ tr:not(:last-child) {
 
 .final-cta h2 {
     font-size: 2.5rem;
+    background: linear-gradient(135deg, #fff, var(--primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: fadeInUp 0.8s ease-out;
     margin-bottom: 0.75rem;
 }
 
@@ -640,7 +650,11 @@ tr:not(:last-child) {
     margin-bottom: 2rem;
 }
 
-.cta-button {
+.faq, .final-cta {
+    box-sizing: border-box;
+}
+
+/* .cta-button {
     display: inline-block;
     padding: 0.9rem 2.2rem;
     font-size: 1rem;
@@ -650,12 +664,12 @@ tr:not(:last-child) {
     border-radius: 999px;
     text-decoration: none;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+} */
 
-.cta-button:hover {
+/* .cta-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-}
+} */
 
 
 /* Footer */
